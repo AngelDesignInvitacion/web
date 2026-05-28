@@ -1,0 +1,944 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  /* ESTILOS AL SOBRE */
+  /*:root:has(#toggle:not(:checked)){
+    overflow-y: hidden;
+   }*/
+
+.sobre{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;    
+}
+
+.sobre .first{
+  background-image: linear-gradient(#98bcdf, #e0f0ff);
+  border-bottom: #b49b50 solid 1px; 
+  transition: transform 1.9s ease; /* Transición suave al cambiar transform */
+}
+
+.vintage1 .vintage2 {
+ display: block;
+}
+
+
+.sobre .second{
+  background-image: linear-gradient(#e0f0ff,#98bcdf);
+  border-top: #b49b50 solid 1px; 
+  transition: transform 1.9s ease; /* Transición suave al cambiar transform */
+}
+
+.sobre .first{
+  width: 100%;
+  height: 50%;
+  position: absolute;
+  top: 0;
+  z-index: 3;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.sobre .second{
+  width: 100%;
+  height: 50%;
+  position: absolute;
+  bottom: 0;
+  z-index: 3;
+}
+
+.sello {
+  background: #998026;
+  border: none;
+  color: #ffff;
+  position: absolute;
+  font-weight: 700;
+  letter-spacing: .2rem;
+  text-align: center;
+  outline: none;
+  cursor: pointer;
+  transition: .2s ease-in-out;
+  width: 150px;
+  height: 150px;
+  top: 50%;
+  left: 50%;
+  z-index: 4;
+  border: none;
+  border-radius: 50%;
+  font-family: "Oleo Script", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 26px;
+  display: flex; /* Centrado del contenido */
+  align-items: center; /* Centra verticalmente el contenido */
+  justify-content: center; /* Centra horizontalmente el contenido */
+  transform: translate(-50%, -50%);
+  animation: 2s vaiven infinite;
+  
+  /*animation: breathe 2s ease-in-out infinite;*/
+
+  /*animation: beat 2s ease-in-out infinite;*/
+}
+.sello::before, .sello::after {
+  content:"";
+  position:absolute;
+  top: 50%;
+  left: 50%;
+  transform:translate(-50%, -50%);
+  width: 70px;
+  height: 70px;
+  border: 10px solid #c8e1eb;
+  border-radius:100%;
+  animation: latido linear 3s infinite;
+}
+
+.sello::after {
+  animation-delay: -1.5s;
+}
+
+@keyframes latido {
+  0% { width:160px; height:160px; border:8px solid #a1bad3; }
+  100% { width:210px; height:210px; border:8px solid transparent; }
+}
+
+.icono {
+  width: 42px;
+  height: 42px;
+  margin-top: 12px;
+  margin-left: 14.5px;
+}
+
+
+@keyframes vaiven {
+  0% {
+      transform: scale(1) translate(-50%, -50%);
+  }
+
+  50% {
+      transform: scale(1.1) translate(-50%, -50%);
+  }
+
+  100% {
+      transform: scale(1) translate(-50%, -50%);
+  }
+}
+
+/* Ocultar checkbox */
+input[type="checkbox"] {
+  display: none;
+}
+
+/* Animaciones al marcar el checkbox */
+input[type="checkbox"]:checked ~ .first {
+  transform: translateY(-100%);
+  opacity: 0;
+  transition: all 2s ease;
+}
+
+input[type="checkbox"]:checked ~ .second {
+  transform: translateY(100%);
+  opacity: 0;
+  transition: all 2s ease;
+}
+
+input[type="checkbox"]:checked ~ .sello {
+  display: none;
+}
+
+/*Estilos con animation contorno respirando
+@keyframes breathe {
+  0% {
+    box-shadow: 0 0 0 0 rgba(27, 29, 28, 0.699);
+  }
+  70% {
+    box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+  }
+}*/
+
+
+/*Estilos de animacion del icono latiendo
+@keyframes beat {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}*/
+
+
+/* ESTILOS A LOS FOLLAJES FLORALES */
+
+
+.follaje1{
+  position: fixed;
+  width: 100%;
+  z-index: 1; 
+}
+.follaje2{
+  position: fixed;
+  width: 100%;
+  z-index: 1;  
+  bottom: 0;  
+}
+
+  /* ESTILOS DE PRESENTACIÓN PRINCIPAL */
+   .imgcopa img{
+     width: 26%;
+   }
+
+
+
+   #portada1{
+    min-height: 100vh;
+     background-image: url(../images/fondo2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    /* animation: movimiento 8s infinite linear alternate;*/
+   }
+
+  @keyframes movimiento {
+    from {
+      background-position: bottom left;
+    }
+    to {
+      background-position: top right;
+    }
+  }
+  .card1 {
+    background-color: #ffffff00;
+    min-height: 90vh;
+    position: relative;
+    border-radius: 100px 0px 100px 0px;
+    -webkit-box-shadow: 0px 3px 23px 0px rgb(141, 140, 132);
+    backdrop-filter: blur(2px);
+  }
+
+  .nombre{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+  }
+  #portada1{
+    display: flex; 
+    align-items: center;
+    justify-content: center; 
+    text-align: center;
+}
+
+  #portada1 h1{
+    font-family: "Great Vibes", cursive;
+    font-weight: 400;
+    font-style: normal;
+    color: #554509;
+    font-size: 65px;
+    /*text-shadow:
+    1px 1px 0 #917407,
+    -1px 1px 0 #917407,
+    -1px -1px 0 #917407,
+    1px -1px 0 #917407;*/
+    position: relative;
+
+  }
+ 
+  #portada1 h2{
+    font-family: "Courgette", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  color: #554509;
+    /*text-shadow:
+    2px 2px 0 #917407,
+    -2px 2px 0 #917407,
+    -2px -2px 0 #917407,
+    2px -2px 0 #917407;*/
+    font-size: 60px;
+    
+  }
+ 
+  /*.elipse h2{
+    margin-left: auto;
+    margin-right: auto;
+    
+  }*/
+
+  
+  #portada1 h3{
+    font-family: "Great Vibes", cursive;
+    font-weight: 400;
+    font-style: normal;
+    color: #554509;
+    font-size: 65px;
+    /*text-shadow:
+    1px 1px 0 #917407,
+    -1px 1px 0 #917407,
+    -1px -1px 0 #917407,
+    1px -1px 0 #917407;*/
+    position: relative;
+
+  }
+
+
+  /*#portada1 .row{
+    margin-top: 150px;
+  }*/
+
+ /* ESTILOS FECHA Y HORA  */
+
+  #fechahora{
+    background-image: url(../images/fondo2.jpg);
+    background-attachment: fixed;
+    animation: movi 50s infinite linear alternate;
+  }
+
+  @keyframes movi {
+    from {
+      background-position:  left;
+    }
+    to {
+      background-position:  right;
+    }
+  }
+  .frase1{
+    font-family: "Cormorant Upright", serif;
+    font-size: 22px;
+  font-weight: 700;
+  font-style: normal;
+  color: #554509;
+  margin-bottom: 0;
+  }
+
+  #card-presen2{
+    padding: 15px;
+    background-color: #ffffff00;
+    -webkit-box-shadow: 0px 3px 23px 0px rgb(141, 140, 132);
+    margin-left: 20px;
+    margin-right: 20px;
+    border: 0;
+    backdrop-filter: blur(2px);
+}
+
+  #fechahora h2{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: #554509;
+    font-size: 30px;
+  }
+  #fechahora h3{
+    font-family: "Alegreya", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+    color: #554509;
+    font-size: 22px;
+  }
+
+  #fechahora h4{
+    font-family: "Alegreya", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+    color: #554509;
+    font-size: 30px;
+  }
+
+#row-fecha{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.dia{
+  font-family: "Alegreya", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+    color: #554509;
+    font-size: 40px;
+
+}
+
+ #card-presen2 .border-top{
+border-color: #554509 !important;
+}
+
+
+/* ESTILOS DE CUENTA REGRESIVA */
+
+
+.fecha-regresiva p {
+  font-family: "Alegreya", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+    color: #554509;
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 0;
+}
+.cuenta-regresiva {
+  display: flex;
+  justify-content: center;
+ 
+}
+.grupo p{
+  margin-bottom: 0;
+}
+
+.grupo{
+  display: grid; 
+}
+.grupo{
+  border: solid #554509;
+  width: 70px;
+  height: 70px;
+  border-radius: 8px;
+  margin: 0 2px;
+  align-items: center;
+  justify-content: center;
+}
+
+.grande{
+  font-size: 30px;
+  color: #554509;
+}
+.grupo p{
+  margin-bottom: 0;
+}
+
+  .chico{
+    color: #554509;
+    font-size: 11px;
+    font-weight: 500;
+  }
+
+
+/* ESTILO SECCIÓN DE PADRES */
+ .padresxv span{
+  font-family: "Courgette", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 28px;
+    color: #554509;
+}
+
+.padresxv p{
+  font-family: "Cormorant Upright", serif;
+  font-size: 24px;
+font-weight: 700;
+font-style: normal;
+color: #554509;
+margin-bottom: 0;
+}
+
+.padrinos span{
+  font-family: "Courgette", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 28px;
+    color: #554509;
+}
+
+.padrinos p{
+  font-family: "Cormorant Upright", serif;
+  font-size: 24px;
+font-weight: 700;
+font-style: normal;
+color: #554509;
+margin-bottom: 0;
+}
+
+
+/* ESTILOS DE CEREMONIA Y RECEPCIÓN */
+
+.ceremonia{
+  min-height: 10vh;
+  background-image: url(../images/vintage3.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.ceremonia span{
+  font-family: "Courgette", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 26px;
+    color: #554509;
+}
+.recepcion{
+  min-height: 10vh;
+  background-image: url(../images/vintage3.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.recepcion span{
+  font-family: "Courgette", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 26px;
+    color: #554509;
+}
+
+.catedral p{
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 20px;
+font-weight: 500;
+font-style: normal;
+color: #554509;
+margin-bottom: 0;
+}
+
+.catedral button{
+  border: none;
+  width: 150px;
+  height: 30px;
+  font-size: 18px;
+  background-color: #7596c7;
+  border-radius: 10px;
+  color: #fff;
+}
+
+.salon p{
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 20px;
+font-weight: 500;
+font-style: normal;
+color: #554509;
+margin-bottom: 0;
+}
+
+.salon button{
+  border: none;
+  width: 150px;
+  height: 30px;
+  font-size: 18px;
+  background-color: #7596c7;
+  border-radius: 10px;
+  color: #fff;
+}
+
+/* ESTILOS DE PROGRAMA DE EVENTOS */
+
+.eventos span{
+  font-family: "Courgette", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 28px;
+    color: #917407;
+    margin-bottom: 30px;
+}
+
+
+.eventos{
+  border-radius: 10px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.contenedor{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.text-box{
+  width: 50%;
+  background-color: #adb5bd30; 
+    border-radius: 10px;  
+}
+
+.circulo, .text-box{
+ margin: 10px;
+}
+
+.text-box p{
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 22px;
+font-weight: 500;
+font-style: normal;
+color: #1d1c1b;
+margin-bottom: 0;
+}
+
+
+/* ESTILOS DE VESTIMENTA */
+
+.vestimenta span{
+  font-family: "Courgette", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 28px;
+    color: #554509;
+}
+
+.vestimenta p{
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 20px;
+font-weight: 500;
+font-style: normal;
+color: #554509;
+margin-bottom: 0;
+}
+
+.iconovestimenta{
+  margin-top: 10px;
+}
+
+/* ESTILOS DE MESA DE REGALOS */
+.mesaregalo span{
+  font-family: "Courgette", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 28px;
+    color: #554509;
+}
+.imgtienda img{
+  width: 150px;
+  height: 100px;
+}
+
+#mesaregalo .imgtienda p{
+  font-size: 24px;
+  font-family: "Alegraya", serif;
+  font-optical-sizing: auto;
+  font-weight: bold;
+  font-style: normal;
+  color: #5f5a4d;
+  margin-bottom: 15px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.mesaregalo p, .asistencia p{
+  font-size: 20px;
+    font-family: "Alegreya", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    color: #554509;
+    margin-bottom: 0;
+}
+
+
+.asistencia button{
+  border: none;
+  width: 150px;
+  height: 30px;
+  font-size: 18px;
+  background-color: #7596c7;
+  border-radius: 10px;
+  color: #fff;
+}
+
+.asistencia span{
+  font-family: "Courgette", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 28px;
+    color: #554509;
+}
+
+#presen2 .no-faltes h2{
+  font-family: "Courgette", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 28px;
+    color: #554509;
+    margin-bottom: 70px;
+}
+/* ESTILOS AL BOTON DE AUDIO */
+
+#toggleButton{
+  position: fixed;
+  left: 10px;
+  bottom: 10px;
+  width: 0px;
+  height: 0px;
+  background: transparent;
+  border: none;
+  z-index: 2;
+}
+
+#toggleButton img{
+  position: fixed;
+  left: 10px;
+  bottom: 10px;
+  width: 45px;
+  height: 45px;
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.7);
+  padding: 5px;
+}
+
+/* ESTILO AL FOOTER O PIE DE PÁGIMA */
+
+.footer {
+  position: relative;
+  padding: 20px;
+  background-color: #7596c7;
+  color: #ffffff;
+  text-align: center;
+}
+
+.footer-content {
+  position: relative;
+z-index: 2;
+}
+
+.footer p {
+  margin: 0;
+  font-size: 13px;
+}
+
+.social-icons {
+  margin: 10px 0;
+}
+
+.social-icon {
+  color: #ffffff;
+  font-size: 16px;
+  margin: 0 10px;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.social-icon:hover {
+  color: #089e35; 
+}
+
+
+/*--------------------------------------------------------------------------------
+ ESTILOS RESPONSIVE 
+ --------------------------------------------------------------------------------*/
+
+ @media(min-width: 992px){
+
+  body{
+    max-width: 50%;
+    margin: 0 auto;
+    overflow-x: hidden;
+  }
+
+  .sobre{
+    max-width: 50%;
+    margin: 0 auto;
+  }
+ 
+  #follaje{
+    max-width: 50%;
+    
+  }
+  .follaje1{
+    max-width: 50%;
+  }
+  .follaje2{
+    max-width: 50%;
+  }
+  
+ 
+  }
+  @media (min-width: 700px){
+ 
+    #portada1 h1{
+      font-size: 90px;
+    }
+    #portada1 h2{
+      font-size: 120px;
+    }
+    #portada1 h3{
+      font-size: 90px;
+    }
+    .frase1{
+      font-size: 45px;
+    }
+    #fechahora h3{
+      font-size: 40px;
+    }
+
+    #fechahora h4{
+      font-size: 60px;
+    }
+
+    #fechahora .dia{
+      font-size: 80px;
+    }
+    .fecha-regresiva p{
+     font-size: 45px;
+    }
+    .grupo{
+      width: 140px;
+      height: 140px;
+      border-radius: 10PX;
+      margin: 0 7px;
+    }
+    .grande{
+      font-size: 3.5rem;
+      width: 120px;
+   
+    }
+    .chico{
+      font-size: 23px;
+    }
+   
+    .padresxv span{
+      font-size: 50px;
+    }
+    .padresxv p{
+      font-size: 45px;
+    }
+
+    .padrinos span{
+      font-size: 50px;
+    }
+    .padrinos p{
+      font-size: 45px;
+    }
+     .ceremonia{
+      margin-top: 40px;
+      margin-bottom: 25px;
+     }
+    .ceremonia span{
+      font-size: 50px;
+    }
+    .catedral p{
+      font-size: 35px;
+    }
+    .catedral button{
+    width: 220px;
+    height: 55px;
+    font-size: 30px;
+    }
+    .recepcion{
+      margin-top: 50px;
+      margin-bottom: 25px;
+     }
+    .recepcion span{
+      font-size: 50px;
+    }
+    .salon p{
+      font-size: 35px;
+    }
+    .salon button{
+    width: 220px;
+    height: 55px;
+    font-size: 30px;
+    }
+
+    .eventos span{
+      font-size: 50px;
+    }
+
+    .text-box p{
+      font-size: 35px;
+    }
+    .circulo img{
+      width: 100px;
+      height: 100px;
+    }
+    .vestimenta span{
+      font-size: 50px;
+    }
+   .vestimenta p{
+    font-size: 35px;
+   }
+   .vestimenta img{
+    width: 200px;
+      height: 200px;
+   }
+   .mesaregalo span{
+    font-size: 50px;
+  }
+
+  #mesaregalo .imgtienda p{
+    font-size: 40px;
+  }
+   
+  .imgtienda img{
+    width: 300px;
+      height: 170px;
+  }
+
+    .mesaregalo p, .asistencia p{
+      font-size: 35px;
+    }
+.asistencia span{
+  font-size: 50px;
+}
+
+.asistencia button{
+  width: 220px;
+  height: 55px;
+  font-size: 30px;
+}
+ #presen2 .no-faltes h2{
+  font-size: 50px;
+  margin-top: 30px;
+  margin-bottom: 150px;
+ }
+ .icono-whatsapp img{
+  width: 100px;
+  height: 100px;
+ }
+
+ #toggleButton img{
+  width: 80px;
+  height: 80px;
+  padding: 8px;
+ }
+
+ .sello{
+  width: 200px;
+height: 200px;
+font-size: 35px;
+}
+
+.footer p {
+  font-size: 22px;
+}
+
+.social-icons i {
+  font-size: 24px;
+}
+.social-icons{
+  margin: 20px 0; 
+}
+
+@keyframes latido {
+  0% { width:220px; height:220px; border:10px solid #998026; }
+  100% { width:280px; height:280px; border:10px solid transparent; }
+}
+
+  }
+
+ 
+@media (max-width:500px){
+  .sello{
+    width: 120px;
+  height: 120px;
+  font-size: 18px;
+  }
+
+  @keyframes latido {
+    0% { width:120px; height:120px; border:6px solid #998026; }
+    100% { width:180px; height:180px; border:6px solid transparent; }
+  }
+  
+}
+
